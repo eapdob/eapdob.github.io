@@ -1,0 +1,935 @@
+/* ____________ todo wrapper____________ */
+
+.wrapper {
+    position: relative;
+}
+
+/* ____________ todo header ____________ */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 25px 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.menu-icon span {
+    display: block;
+    width: 52px;
+    height: 2px;
+    margin-bottom: 8px;
+    background-color: #fff;
+}
+
+.menu-icon span:last-child {
+    margin-bottom: 0;
+}
+
+.left-nav {
+    display: none;
+}
+
+.leftMenu {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin-right: -50px;
+    background: transparent url(../images/logo.png) no-repeat center center;
+    background-size: contain;
+}
+
+.rightMenu {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.rightMenu__item {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.rightMenu__item:last-child {
+    margin-right: 0;
+}
+
+.rightMenu__item a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 26px 0;
+    background-color: rgba(0, 0, 0, .95);
+    transition: all .2s ease;
+}
+
+.mobile-menu.open {
+    left: 0;
+    transition: all .2s ease;
+}
+
+.menu {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.menu__item a {
+    display: block;
+    padding: 24px 0;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* ____________ end header ____________ */
+
+/* ____________ todo slider ____________ */
+
+.slider__item {
+    position: relative;
+}
+
+.slider__img {
+    width: 100%;
+    height: auto;
+}
+
+.sliderCaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__title {
+    margin: 0;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.slider__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .owl-nav {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 100%;
+}
+
+.slider .owl-prev {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    width: 32px;
+    height: 32px;
+    background: url(../images/left-arrow.svg) no-repeat;
+}
+
+.slider .owl-next {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    width: 32px;
+    height: 32px;
+    background: url(../images/right-arrow.svg) no-repeat;
+}
+
+.slider .owl-dots {
+    display: none;
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider .owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #444;
+    border-radius: 50%;
+    margin-right: 44px;
+}
+
+.slider .owl-dot:last-child {
+    margin-right: 0;
+}
+
+.slider .owl-dot.active {
+    background-color: #ffff00;
+}
+
+/* ____________ end slider ____________ */
+
+/* ____________ end wrapper____________ */
+
+/* ____________ todo description ____________ */
+
+.description {
+    padding: 44px 0 18px;
+    background-color: #000;
+}
+
+.description-row {
+    margin: 0 -15px;
+}
+
+.description-text-container {
+    padding: 0 15px;
+}
+
+.description__text {
+    margin: 0 0 44px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.description-video-container {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.description__video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.description__video iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.description__video:active button#playBtn,
+.description__video:active button#pauseBtn,
+.description__video:active button#muteBtn,
+.description__video:active button#unMuteBtn {
+    opacity: 1;
+}
+
+button#playBtn {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    outline: none;
+    border: none;
+    opacity: 0;
+    background: url(../images/play.svg) no-repeat center center;
+}
+
+button#pauseBtn {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    outline: none;
+    border: none;
+    opacity: 0;
+    background: url(../images/stop.svg) no-repeat center center;
+}
+
+button#muteBtn {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    outline: none;
+    border: none;
+    opacity: 0;
+    background: url(../images/volume-on.svg) no-repeat center center;
+}
+
+button#unMuteBtn {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    outline: none;
+    border: none;
+    opacity: 0;
+    background: url(../images/volume-off.svg) no-repeat center center;
+}
+
+.description__video iframe { pointer-events: none; }
+
+/* ____________ end description ____________ */
+
+/* ____________ todo catalog ____________ */
+
+.catalog {
+    text-align: center;
+    background-color: #000;
+}
+
+.catalog__list {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    font-size: 0;
+}
+
+.catalog__item {
+    position: relative;
+}
+
+.catalog__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.catalogCaption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.catalog__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.catalog__subtitle {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.catalog__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.catalog__btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 40px 0;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 2px 3px 0 1px #fff;
+    transition: all .2s ease;
+}
+
+.catalog__btn:active {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 2px 3px 0 1px #d3d3d3;
+    transition: all .2s ease;
+}
+
+/* ____________ end catalog ____________ */
+
+/* ____________ todo map ____________ */
+
+.map {
+    position: relative;
+}
+
+.map__title {
+    position: absolute;
+    bottom: 87px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    margin-bottom: 34px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.map__btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 60px;
+    margin-bottom: 40px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 2px 3px 0 1px #fff;
+    transition: all .2s ease;
+}
+
+.map__btn:active {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, .5);
+    box-shadow: 2px 3px 0 1px #d3d3d3;
+    transition: all .2s ease;
+}
+
+/* ____________ end map ____________ */
+
+/* ____________ todo brands ____________ */
+
+.brand {
+    padding: 54px 0 28px;
+    background-color: #fff;
+}
+
+.brand-row {
+    margin: 0 -7px;
+}
+
+.brandList {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    text-align: center;
+    font-size: 0;
+}
+
+.brandList__item {
+    display: inline-block;
+    width: 25%;
+    padding: 0 7px;
+    margin-bottom: 38px;
+    font-size: 16px;
+}
+
+.brandList__item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ____________ end brands ____________ */
+
+/* ____________ todo footer ____________ */
+
+.footer {
+    padding: 64px 0 38px;
+    background-color: #000;
+}
+
+/* ____________ todo footer top ____________ */
+
+.footer__top {
+    margin-bottom: 42px;
+}
+
+.footer__title {
+    margin-top: 0;
+    margin-bottom: 34px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.form {
+    position: relative;
+}
+
+.form__input {
+    display: inline-block;
+    width: 100%;
+    padding-right: 120px;
+    padding-bottom: 6px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    font-size: 15px;
+    font-family: 'Poiret One', cursive;
+}
+
+.form__input:focus {
+    padding-left: 10px;
+}
+
+.form__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    text-align: right;
+    transition: all .2s ease;
+}
+
+.subscribe {
+    margin-bottom: 48px;
+}
+
+.social {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.social__item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social__item:last-child {
+    margin-right: 0;
+}
+
+.social__item a {
+    display: block;
+    background-size: contain;
+}
+
+.social__item:first-child a {
+    width: 30px;
+    height: 29px;
+    background: url("../images/social_logo_insta.png") no-repeat center center;
+}
+
+.social__item:nth-child(2) a {
+    width: 15px;
+    height: 28px;
+    background: url("../images/social_logo_fb.png") no-repeat center center;
+}
+
+.social__item:nth-child(3) a {
+    width: 38px;
+    height: 26px;
+    background: url("../images/social_logo_yt.png") no-repeat center center;
+}
+
+/* ____________ end footer top ____________ */
+
+/* ____________ todo footer bottom ____________ */
+
+.copyright {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ____________ end footer bottom ____________ */
+
+/* ____________ end footer ____________ */
+
+/* ____________ todo media ____________ */
+
+@media (min-width: 360px) {
+    .slider__title {
+        font-size: 52px;
+    }
+
+    .description__text {
+        font-size: 20px;
+    }
+
+    .map__title {
+        font-size: 26px;
+    }
+
+    .footer__title {
+        font-size: 25px;
+    }
+
+    .form__input {
+        font-size: 16px;
+    }
+
+    .form__btn {
+        font-size: 16px;
+    }
+
+    .copyright {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 425px) {
+    .slider__title {
+        font-size: 62px;
+    }
+}
+
+@media (min-width: 480px) {
+    .logo {
+        width: 147px;
+        height: 55px;
+        margin-right: -73px;
+    }
+
+    .rightMenu__item a {
+        font-size: 20px;
+    }
+
+    .mobile-menu {
+        padding: 38px 0 46px;
+    }
+
+    .menu__item a {
+        padding: 28px 0;
+        font-size: 20px;
+    }
+
+    .slider__title {
+        font-size: 64px;
+    }
+
+    .map__title {
+        font-size: 36px;
+    }
+
+    .footer__title {
+        font-size: 30px;
+    }
+
+    .form__input {
+        font-size: 18px;
+    }
+
+    .form__btn {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 56px 0 58px;
+    }
+
+    .rightMenu__item a {
+        margin-right: 12px;
+    }
+
+    .rightMenu__item:last-child a {
+        margin-right: 0;
+    }
+
+    .slider__title {
+        font-size: 98px;
+    }
+
+    .slider .owl-nav {
+        display: block;
+        top: 44%;
+    }
+
+    .slider .owl-prev {
+        left: 4%;
+        width: 64px;
+        height: 64px;
+    }
+
+    .slider .owl-next {
+        right: 4%;
+        width: 64px;
+        height: 64px;
+    }
+
+    .slider .owl-dots {
+        display: block;
+        top: 88%;
+    }
+
+    .catalog__item {
+        display: inline-block;
+        width: 33.3333%;
+    }
+
+    .catalog__item:nth-child(4) {
+        display: none;
+    }
+
+    .brandList__item {
+        width: 20%;
+    }
+
+    .footer {
+        padding: 62px 0 50px;
+    }
+
+    .footer__top {
+        margin-bottom: 46px;
+    }
+
+    .footer__top .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .subscribe {
+        margin: 0;
+    }
+
+    .social__item {
+        margin-right: 22px;
+    }
+}
+
+@media (min-width: 812px) {
+    .slider .owl-nav {
+        top: 44%;
+    }
+}
+
+@media (min-width: 900px) {
+    .slider .owl-nav {
+        top: 45%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slider__title {
+        font-size: 120px;
+    }
+
+    .slider .owl-nav {
+        top: 46%;
+    }
+
+    .brand {
+        padding: 76px 0 52px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .left-nav {
+        display: block;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu__item {
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    .menu__item a {
+        position: relative;
+        padding: 0;
+    }
+
+    .menu__item a:before {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: all .3s ease;
+    }
+
+    .menu__item a:hover:before {
+        width: 100%;
+        transition: all .3s ease;
+    }
+
+    .menu__item a:after {
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: all .3s ease;
+    }
+
+    .menu__item a:hover:after {
+        width: 100%;
+        transition: all .3s ease;
+    }
+
+    .slider__title {
+        font-size: 140px;
+    }
+
+    .slider .owl-nav {
+        top: 44%;
+    }
+
+    .slider .owl-prev,
+    .slider .owl-next {
+        width: 96px;
+        height: 96px;
+    }
+
+    .slider .owl-dots {
+        top: 90%;
+    }
+
+    .slider .owl-dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    .description-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .description-text-container {
+        width: 50%;
+    }
+
+    .description-video-container {
+        width: 50%;
+    }
+
+    .description__video:hover button#playBtn,
+    .description__video:hover button#pauseBtn,
+    .description__video:hover button#muteBtn,
+    .description__video:hover button#unMuteBtn {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .catalog__item {
+        width: 25%;
+    }
+
+    .catalog__item:nth-child(4) {
+        display: inline-block;
+    }
+
+    .catalog__item:hover .catalogCaption {
+        opacity: 0;
+        transition: all .3s ease;
+    }
+
+    .catalog__btn:hover {
+        box-shadow: 8px 6px 0 0 #d3d3d3;
+        transition: all .2s ease;
+    }
+
+    .map__btn:hover {
+        box-shadow: 8px 6px 0 0 #d3d3d3;
+        transition: all .2s ease;
+    }
+
+    .brandList__item {
+        width: 12.5%;
+    }
+
+    .form__btn:hover {
+        color: #ababab;
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+
+    .social__item a {
+        transition: all .2s ease;
+    }
+
+    .social__item a:hover {
+        transform: scale(0.9);
+        transition: all .2s ease;
+    }
+}
+
+@media (min-width: 1400px) {
+    .slider .owl-nav {
+        top: 45%;
+    }
+}
+
+/* ____________ end media ____________ */

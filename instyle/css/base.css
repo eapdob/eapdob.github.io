@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poiret One', cursive, Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
