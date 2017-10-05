@@ -1,0 +1,104 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.personLastBlock {
+		margin-top: 35px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.logoContainer {
+	    margin-left: 20px;
+    	margin-top: 8px;
+	}
+
+	.headerWrapper .headerDescription .headerCentered .headerText h1 {
+		font-size: 2em;
+	}
+
+	.headerWrapper .headerDescription .headerCentered .headerText p {
+		font-size: 1em;
+	}
+
+	.section__resume .left,
+	.section__resume .right,
+	.section__resume .sectionContent h4,
+	.section__resume .resumeIcon {
+		margin-bottom: 10px;
+		text-align: left;
+	}
+
+	.section__portfolio li {
+		margin: 0 14px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.headerWrapper .headerDescription .headerCentered .headerText h1 {
+		padding: 0 10px;
+		font-size: 1.8em;
+	}
+
+	.headerWrapper .headerDescription .headerCentered .headerText p {
+		padding: 0 10px;
+		font-size: 0.8em;
+	}
+
+	.footer .socialWrapper {
+		float: left;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.footer p {
+		display: block;
+	}
+
+	.section__portfolio li {
+		margin: 0 2px;
+	}
+
+	.section__portfolio li span {
+		font-size: 9px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
