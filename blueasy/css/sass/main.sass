@@ -1,0 +1,607 @@
+$mainColor: #fff
+$accentColor: #4bcaff
+$textColor: #515f67
+
+*
+  box-sizing: border-box
+
+body, html
+  height: 100%
+  overflow-x: hidden
+  color: $mainColor
+  background-color: $textColor
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: $accentColor
+
+body input:required:valid,
+body textarea:required:valid
+  color: $mainColor
+
+section
+  padding: 80px 0
+  h2
+    margin: 0 0 52px
+    font-size: 30px
+    font-weight: 500
+    text-transform: uppercase
+    &::after
+      display: block
+      content: ""
+      width: 45px
+      height: 3px
+      margin-top: 10px
+
+/* top wrapper */
+
+.topWrapper
+  background: $textColor url(../images/top_bg.jpg) no-repeat center center
+  background-size: cover
+
+/* header */
+
+.header
+  position: relative
+  padding: 58px 0
+  background-color: rgba(72, 83, 90, .85)
+  .logo
+    float: left
+    width: 127px
+    height: 23px
+    margin-top: 13px
+    background: url(../images/logo.png) no-repeat center center
+    background-size: cover
+  .menuToggle
+    position: absolute
+    top: 0
+    right: 0
+    display: none
+    border-radius: 3px
+    padding: 10px 7px
+    background-color: transparent
+    span
+      display: block
+      width: 40px
+      height: 3px
+      margin-bottom: 5px
+      border-radius: 1px
+      background-color: $mainColor
+  .container
+    .mobileMenu
+      position: absolute
+      top: 100%
+      right: -100%
+      width: 100%
+      -webkit-transition: all .2s ease-in-out
+      -moz-transition: all .2s ease-in-out
+      -ms-transition: all .2s ease-in-out
+      -o-transition: all .2s ease-in-out
+      transition: all .2s ease-in-out
+      ul
+        float: none
+        li
+          float: none
+          margin: 0
+          &:last-child
+            a
+              border: none
+          a
+            padding: 15px 20px
+            border: none
+            border-bottom: 1px solid $mainColor
+            background-color: $accentColor
+            &:hover
+              color: $mainColor
+              background-color: $textColor
+    .mobileMenu.open
+      right: 0
+
+.menu
+  float: right
+  padding: 0
+  margin: 0
+  list-style-type: none
+  .menu__item
+    float: left
+    margin-left: 10px
+    &:first-child
+      margin-left: 44px
+    a
+      display: block
+      padding: 13px 10px
+      border: 2px solid transparent
+      font-size: 14px
+      font-weight: 600
+      color: $mainColor
+      text-transform: uppercase
+      text-decoration: none
+      -webkit-transition: all .2s ease
+      -moz-transition: all .2s ease
+      -ms-transition: all .2s ease
+      -o-transition: all .2s ease
+      transition: all .2s ease
+      &:hover
+        color: $accentColor
+        border: 2px solid $accentColor
+  .menu__item.active
+    a
+      color: $accentColor
+      border: 2px solid $accentColor
+
+/* hero */
+
+.hero
+  padding: 250px 0 258px
+  .hero__title
+    padding: 16px
+    margin-left: -42px
+    color: $mainColor
+    background-color: rgba(72, 83, 90, .85)
+    font-size: 34px
+    font-weight: 500
+    text-transform: uppercase
+    text-align: center
+    white-space: nowrap
+  .hero__title_second
+    margin-top: 12px
+
+/* services */
+
+.services
+  color: $mainColor
+  background-color: $accentColor
+  .services__title
+    &::after
+      background-color: $mainColor
+  .servicesItem
+    .servicesItem__icon
+      display: block
+      max-width: 100%
+      height: 48px
+      margin-bottom: 24px
+    .servicesItem__name
+      margin: 0 0 19px
+      font-size: 24px
+      font-weight: 600
+      text-transform: uppercase
+    .servicesItem__description
+      font-size: 12px
+
+/* portfolio */
+
+.portfolio
+  padding: 80px 0 50px
+  background-color: $mainColor
+  .portfolio__title
+    margin: 0 0 92px
+    color: $textColor
+    &::after
+      background-color: $textColor
+  .menu
+    .menu__item
+      a
+        color: $textColor
+        &:hover
+          color: $accentColor
+  .portfolioList
+    padding: 0
+    margin: 0 -15px
+    list-style-type: none
+    font-size: 0
+    .portfolioList__item
+      position: relative
+      display: inline-block
+      width: 25%
+      padding: 0 15px
+      margin-bottom: 30px
+      font-size: 1px
+      a
+        position: relative
+        display: block
+        width: 100%
+        height: 100%
+        background-color: #424b53
+        overflow: hidden
+        img
+          display: block
+          width: 100%
+          height: auto
+          opacity: .8
+          -webkit-transition: all .2s ease
+          -moz-transition: all .2s ease
+          -ms-transition: all .2s ease
+          -o-transition: all .2s ease
+          transition: all .2s ease
+        button
+          position: absolute
+          top: 50%
+          left: 50%
+          border: none
+          outline: none
+          color: $mainColor
+          background-color: transparent
+          font-size: 60px
+          opacity: 0
+          -webkit-transform: translate(-50%, -50%)
+          -moz-transform: translate(-50%, -50%)
+          -ms-transform: translate(-50%, -50%)
+          -o-transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%)
+          -webkit-transition: all .2s ease
+          -moz-transition: all .2s ease
+          -ms-transition: all .2s ease
+          -o-transition: all .2s ease
+          transition: all .2s ease
+        &:hover
+          img
+            -moz-transform: scale(1.1)
+            -webkit-transform: scale(1.1)
+            transform: scale(1.1)
+            opacity: .25
+          button
+            opacity: 1
+
+/* default */
+
+.default
+  color: $mainColor
+  background-color: $textColor
+  .default__title
+    &::after
+      background-color: $mainColor
+  .default__text
+    margin: 0 0 33px
+    font-size: 14px
+  .default__btn
+    display: block
+    width: 140px
+    height: 45px
+    line-height: 45px
+    border: 2px solid #353f46
+    font-size: 14px
+    font-weight: 600
+    color: #353f46
+    text-transform: uppercase
+    text-decoration: none
+    text-align: center
+    -webkit-transition: all .2s ease
+    -moz-transition: all .2s ease
+    -ms-transition: all .2s ease
+    -o-transition: all .2s ease
+    transition: all .2s ease
+    &:hover
+      color: $textColor
+      background-color: #353f46
+  .videoWrapper
+    position: relative
+    height: 0
+    padding-bottom: 56.25%
+    padding-top: 25px
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+/* twitter */
+
+.twitter
+  color: $mainColor
+  background-color: $accentColor
+  .twitter__title
+    &::after
+      background-color: $mainColor
+  .twitter__img
+    text-align: right
+    img
+      width: 28px
+      height: 22px
+  .twitter__text
+    margin: 0
+    font-size: 28px
+
+/* social */
+
+.social
+  padding: 100px 0 170px
+  color: $mainColor
+  background: $textColor url(../images/social_bg.jpg) no-repeat center center
+  background-size: cover
+  .social__title
+    &::after
+      background-color: $mainColor
+  .social__text
+    margin: 0 0 36px
+    font-size: 14px
+  .socialMenu
+    padding: 0
+    margin: 0
+    list-style-type: none
+    .socialMenu__item
+      display: inline-block
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+      a
+        display: block
+        width: 64px
+        height: 64px
+        border: 2px solid $mainColor
+        text-align: center
+        &::before
+          display: inline-block
+          content: ""
+          height: 100%
+          vertical-align: middle
+        img
+          display: inline-block
+          max-width: 100%
+          height: auto
+          vertical-align: middle
+
+/* testimonials */
+
+.testimonials
+  color: $textColor
+  background-color: $mainColor
+  .testimonials__title
+    &::after
+      background-color: $textColor
+  .testimonials__img
+    text-align: right
+    img
+      display: inline-block
+      width: 32px
+      height: 26px
+  .testimonials__text
+    margin: 0 0 38px
+    font-size: 28px
+  .testimonials__author
+    color: $accentColor
+    font-size: 14px
+    font-weight: 600
+
+/* contact */
+
+.contact
+  color: $mainColor
+  background: $textColor url(../images/contact_bg.jpg) no-repeat center center
+  background-size: cover
+  .contact__title
+    &::after
+      background-color: $mainColor
+  .form
+    .form-group
+      display: block
+      margin-bottom: 40px
+      .form__title
+        display: block
+        margin-bottom: 9px
+        font-size: 14px
+        text-transform: uppercase
+      input, textarea
+        line-height: 60px
+        text-indent: 12px
+        border: 3px solid $mainColor
+        outline: none
+        background-color: transparent
+      input::placeholder,
+      textarea::placeholder
+        color: #3e4d54
+      input
+        width: 470px
+      textarea
+        width: 200%
+        height: 220px
+      .textDanger
+        margin-top: 10px
+        color: #000
+    button
+      display: block
+      width: 370px
+      height: 60px
+      border: none
+      outline: none
+      background-color: $accentColor
+      font-size: 14px
+      font-weight: 600
+      text-transform: uppercase
+      text-align: center
+      -webkit-transition: all .2s ease
+      -moz-transition: all .2s ease
+      -ms-transition: all .2s ease
+      -o-transition: all .2s ease
+      transition: all .2s ease
+      &:hover
+        color: $mainColor
+        background-color: #000
+  .contact__text
+    margin: 29px 0 40px
+    font-size: 14px
+  p
+    font-size: 14px
+
+/* footer */
+
+.footer
+  padding: 80px 0
+  color: $textColor
+  background-color: #353f47
+  .menu
+    float: left
+    .menu__item
+      padding: 0 14px
+      margin: 0
+      border-right: 2px solid $textColor
+      &:first-child
+        padding: 0 14px 0 0
+      &:last-child
+        padding: 0 0 0 14px
+        border-right: none
+      a
+        padding: 0
+        border: none
+        color: $textColor
+        &:hover
+          color: $mainColor
+  .menu__item.active
+    a
+      color: $mainColor
+  p
+    font-size: 14px
+
+/* media queries */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  .hero
+    .hero__title
+      white-space: normal
+      font-size: 28px
+
+  .contact
+    .form
+      .form-group
+        input
+          width: 420px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 991px)
+  .header
+    .menuToggle
+      display: block
+      right: 10px
+
+  .hero
+    .hero__title
+      font-size: 27px
+
+  section
+    h2
+      position: relative
+      text-align: center
+      &::after
+        position: absolute
+        top: 120%
+        left: 50%
+        margin-left: -22px
+
+  .services
+    .servicesItem
+      .servicesItem__icon
+        margin: 27px auto
+      .servicesItem__name
+        margin: 0 0 30px
+        text-align: center
+
+  .portfolio
+    .menu
+      float: none
+      display: table
+      margin: 0 0 30px
+      .menu__item
+        float: none
+        display: table-cell
+        width: 3%
+        text-align: center
+    .portfolioList
+      .portfolioList__item
+        width: 50%
+
+  .default
+    .default__title
+      margin: 0 0 68px
+    .default__btn
+      margin: 30px auto
+
+  .twitter
+    .twitter__img
+      img
+        display: block
+        margin: 30px auto
+
+  .social
+    .socialMenu
+      font-size: 0
+      .socialMenu__item
+        margin: 0
+        width: 25%
+        text-align: center
+        a
+          display: inline-block
+
+  .testimonials
+    .testimonials__img
+      img
+        display: block
+        margin: 30px auto
+
+  .contact
+    .form
+      .form-group
+        input
+          width: 100%
+        textarea
+          width: 100%
+      button
+        width: 270px
+        margin: 0 auto
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  .header
+    .menuToggle
+      right: 20px
+
+  .hero
+    .hero__title
+      font-size: 15px
+      margin-left: 0
+
+  .twitter
+    .twitter__text
+      font-size: 20px
+
+  .testimonials
+    .testimonials__text
+      font-size: 20px
+    .testimonials__author
+      text-align: center
+
+  .footer
+    p
+      margin: 60px 0 0
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  .hero
+    .hero__title
+      font-size: 13px
+
+  .portfolio
+    .menu
+      .menu__item
+        a
+          padding: 13px 5px
+          font-size: 10px
+    .portfolioList
+      .portfolioList__item
+        width: 100%
+
+  .footer
+    .menu
+      .menu__item
+        padding: 0 3px
+        &:first-child
+          padding: 0 3px 0 0
+        &:last-child
+          padding: 0 0 0 3px
+        a
+          font-size: 10px
+    p
+      font-size: 10px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px)

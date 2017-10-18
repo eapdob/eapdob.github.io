@@ -1,0 +1,1 @@
+Blueasy site template
