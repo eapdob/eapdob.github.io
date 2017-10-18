@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
@@ -5,7 +9,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.6;
-  -webkit-font-smoothing: antialised; }
+  -webkit-font-smoothing: antialiased; }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -387,30 +391,6 @@ body textarea:required:valid {
       padding: 2px 10px;
       border: 1px solid #fff;
       background-color: transparent; }
-
-.portfolioItem__description {
-  background-color: #fff;
-  max-width: 500px;
-  margin: 0 auto; }
-  .portfolioItem__description h4,
-  .portfolioItem__description p {
-    padding: 20px 20px 0 20px; }
-  .portfolioItem__description h4 {
-    padding-top: 25px;
-    margin-top: 20px;
-    margin-bottom: 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400; }
-  .portfolioItem__description p {
-    margin-top: 0; }
-  .portfolioItem__description img {
-    width: 100%;
-    height: auto;
-    margin-top: 10px; }
-
-.modalBoxContent {
-  position: relative; }
 
 /* section contacts */
 .section__contacts .contactBox {

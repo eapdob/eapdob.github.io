@@ -2,7 +2,7 @@ $(document).ready(function() {
 	// header height
 	function heightDetect() {
 		$(".header").css("height", $(window).height());
-	};
+	}
 	heightDetect();
 	$(window).resize(function(){
 		heightDetect();
@@ -56,14 +56,13 @@ $(document).ready(function() {
 	});
 
 	// popup portfolio
-	$(".popupContent").magnificPopup({type: "inline", midClick: true});
-
+	// $(".popupContent").magnificPopup({type: "inline", midClick: true});
 	// id for portfolio items
-	$(".portfolioItem").each(function(i) {
-		i = i + 1;
-		$(this).find(".popupContent").attr("href", "#work_" + i + "");
-		$(this).find(".portfolioItem__description").attr("id", "work_" + i + "");
-	});
+	// $(".portfolioItem").each(function(i) {
+	// 	i = i + 1;
+	// 	$(this).find(".popupContent").attr("href", "#work_" + i + "");
+	// 	$(this).find(".portfolioItem__description").attr("id", "work_" + i + "");
+	// });
 
 	// contacts section
 	// form validation
