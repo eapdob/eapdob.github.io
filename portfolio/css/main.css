@@ -362,7 +362,8 @@ body textarea:required:valid {
 .section__portfolio .portfolioItem {
   display: none;
   position: relative;
-  padding: 0; }
+  padding: 0;
+  height: 150px; }
   .section__portfolio .portfolioItem img {
     width: 100%;
     height: auto; }
