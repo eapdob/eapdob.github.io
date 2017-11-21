@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="topBtn"></div>
 <div class="topWrapper">
     <header class="header">
         <div class="container">
@@ -29,10 +30,10 @@
                     <div class="header__desktopMenu">
                         <nav class="header__nav">
                             <ul class="menu clearfix">
-                                <li class="menu__item"><a href="#">Home</a></li>
-                                <li class="menu__item"><a href="#">Menu</a></li>
-                                <li class="menu__item"><a href="#">About</a></li>
-                                <li class="menu__item"><a href="#">Contact</a></li>
+                                <li class="menu__item"><a href="#today">Today</a></li>
+                                <li class="menu__item"><a href="#story">Story</a></li>
+                                <li class="menu__item"><a href="#event">Event</a></li>
+                                <li class="menu__item"><a href="#reservation">Reservation</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -61,7 +62,7 @@
         </div>
     </div>
 </div>
-<div class="today">
+<div class="today" id="today">
     <img class="today__borderTop" src="images/today_top_border.png" alt="border top">
     <div class="container">
         <div class="row">
@@ -100,7 +101,7 @@
         </div>
     </div>
 </div>
-<div class="ourStory">
+<div class="ourStory" id="story">
     <div class="container">
         <div class="row">
             <div class="col-xs-offset-2 col-xs-8 col-sm-6 col-md-6">
@@ -139,7 +140,7 @@
     <!--<iframe id="cookVideo" width="560" height="315" src="https://www.youtube.com/embed/_MDwhva7bQU?autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>-->
     <div id="cookVideo"></div>
 </div>
-<div class="next">
+<div class="next" id="event">
     <img class="next__borderTop" src="images/next_border_top.png" alt="border top">
     <div class="container">
         <div class="row">
@@ -163,7 +164,7 @@
         </div>
     </div>
 </div>
-<section class="reservation">
+<section class="reservation" id="reservation">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-offset-4 col-md-4">

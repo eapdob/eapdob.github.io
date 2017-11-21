@@ -1,22 +1,49 @@
 $(function() {
-    var __window = $(window);
-    var __mobileIcon = $(".header__mobileMenuIcon");
+    var _window = $(window);
+    var mobileIcon = $(".header__mobileMenuIcon");
+    var topShow = 200;
 
     // window resizing
-    __window.on("resize", function() {
+    _window.on("resize", function() {
         // change to mobile menu
-        if (__window.width() < 992) {
+        if (_window.width() < 992) {
             $(".header__nav").appendTo($(".header__mobileMenu"));
             $(".header__mobileMenu").removeClass("open");
         } else {
             $(".header__nav").appendTo($(".header__desktopMenu"));
         }
     });
-    __window.trigger("resize");
+    _window.trigger("resize");
 
-    __mobileIcon.on("click", function() {
+    // mobile menu
+    mobileIcon.on("click", function() {
         var el = $(this).data("toggle");
         $(el).toggleClass("open");
+    });
+
+    // arrow up from bottom right side
+    _window.scroll(function() {
+       if ($(this).scrollTop() > topShow) $(".topBtn").fadeIn("slow");
+       else $(".topBtn").fadeOut("slow");
+    });
+    $(".topBtn").on("click", function() {
+       $("body, html").animate({
+           scrollTop: 0
+       }, 1000);
+    });
+
+    // smooth transition to anchor
+    $(".header .menu .menu__item a").on("click", function(event) {
+
+        // prevent standart operation
+        event.preventDefault();
+
+        // get anchor id
+        var href = $(this).attr("href");
+        console.log(href);
+
+        // animate to id
+        $("html, body").animate({ scrollTop: $(href).offset().top }, 750);
     });
 });
 
